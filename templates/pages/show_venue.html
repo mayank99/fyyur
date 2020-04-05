@@ -1,6 +1,16 @@
 {% extends 'layouts/main.html' %}
 {% block title %}Venue Search{% endblock %}
 {% block content %}
+
+<script>
+	function deleteVenue(id) {
+		console.log(id);
+		fetch(`/venues/${id}`, {
+      method: 'DELETE'
+    }).then(() => window.location.replace('/'));
+	}
+</script>
+
 <div class="row">
 	<div class="col-sm-6">
 		<h1 class="monospace">
@@ -8,6 +18,7 @@
 		</h1>
 		<p class="subtitle">
 			ID: {{ venue.id }}
+		<a onclick="deleteVenue('{{venue.id}}')">&nbsp;<i class="fas fa-trash"></i></a>
 		</p>
 		<div class="genres">
 			{% for genre in venue.genres %}
