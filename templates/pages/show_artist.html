@@ -8,6 +8,8 @@
 		</h1>
 		<p class="subtitle">
 			ID: {{ artist.id }}
+			<a href="/artists/{{artist.id}}/edit">&nbsp;<i class="fas fa-edit"></i></a>
+			<a onclick="deleteVenue('{{artist.id}}')">&nbsp;<i class="fas fa-trash"></i></a>
 		</p>
 		<div class="genres">
 			{% for genre in artist.genres %}

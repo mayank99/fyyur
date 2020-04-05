@@ -4,7 +4,6 @@
 
 <script>
 	function deleteVenue(id) {
-		console.log(id);
 		fetch(`/venues/${id}`, {
       method: 'DELETE'
     }).then(() => window.location.replace('/'));
@@ -18,7 +17,8 @@
 		</h1>
 		<p class="subtitle">
 			ID: {{ venue.id }}
-		<a onclick="deleteVenue('{{venue.id}}')">&nbsp;<i class="fas fa-trash"></i></a>
+			<a href="/venues/{{venue.id}}/edit">&nbsp;<i class="fas fa-edit"></i></a>
+			<a onclick="deleteVenue('{{venue.id}}')">&nbsp;<i class="fas fa-trash"></i></a>
 		</p>
 		<div class="genres">
 			{% for genre in venue.genres %}

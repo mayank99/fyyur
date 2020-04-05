@@ -88,6 +88,9 @@ class VenueForm(FlaskForm):
     image_link = StringField(
         'image_link'
     )
+    website = StringField(
+        'website'
+    )
     genres = SelectMultipleField(
         # TODO implement enum restriction
         'genres', validators=[DataRequired()],
