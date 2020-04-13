@@ -25,7 +25,6 @@ app.config.from_object("config")
 db = SQLAlchemy(app)
 # db.create_all()
 migrate = Migrate(app, db)
-print(app.config['SQLALCHEMY_DATABASE_URI'])
 
 # ----------------------------------------------------------------------------#
 # Models.
