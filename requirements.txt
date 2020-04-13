@@ -1,4 +1,5 @@
 Flask
+psycopg2
 sqlalchemy
 Flask-SQLAlchemy
 Flask-Migrate
