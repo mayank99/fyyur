@@ -162,6 +162,8 @@ def create_venue_submission():
             address=request.form["address"],
             phone=request.form["phone"],
             genres=request.form.getlist("genres"),
+            website=request.form["website"],
+            image_link=request.form["image_link"],
             facebook_link=request.form["facebook_link"],
         )
         db.session.add(new_venue)
