@@ -1,3 +1,11 @@
+Flask
+sqlalchemy
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Script
+gunicorn
+xmltodict
+requests
 babel
 python-dateutil==2.6.0
 flask-moment
